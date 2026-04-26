@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>RusChords</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-C24PSRXE.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DD1n0pMX.css">
+</head>
+<body>
+
+  <!-- ЭКРАН 1: КАТАЛОГ -->
+  <div id="catalog-screen" class="screen">
+    <header class="header">
+      <h1 class="logo">🎸 RusChords</h1>
+      <p class="subtitle">Аккорды русских песен</p>
+    </header>
+
+    <div class="search-wrapper">
+      <input type="text" class="search-input" placeholder="Поиск песен..." />
+      <span class="search-icon">🔍</span>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn">Все исполнители ▼</button>
+      <button class="filter-btn">Сложность ▼</button>
+    </div>
+
+    <main class="song-list">
+      <article class="song-card" data-id="tsoy">
+        <div class="song-header">
+          <h2 class="song-title">Звезда по имени Солнце</h2>
+          <p class="song-artist">Виктор Цой</p>
+        </div>
+        <div class="chord-tags">
+          <span class="tag chord">Am</span><span class="tag chord">F</span><span class="tag chord">C</span><span class="tag chord">G</span>
+        </div>
+        <span class="badge badge-medium">Средне</span>
+      </article>
+
+      <article class="song-card" data-id="vysotsky">
+        <div class="song-header">
+          <h2 class="song-title">Конь</h2>
+          <p class="song-artist">Владимир Высоцкий</p>
+        </div>
+        <div class="chord-tags">
+          <span class="tag chord">Am</span><span class="tag chord">Dm</span><span class="tag chord">E</span><span class="tag chord">Am</span>
+        </div>
+        <span class="badge badge-hard">Сложно</span>
+      </article>
+
+      <article class="song-card" data-id="lube">
+        <div class="song-header">
+          <h2 class="song-title">Комбат</h2>
+          <p class="song-artist">Любэ</p>
+        </div>
+        <div class="chord-tags">
+          <span class="tag chord">Dm</span><span class="tag chord">Bb</span><span class="tag chord">C</span><span class="tag chord">Dm</span>
+        </div>
+        <span class="badge badge-easy">Легко</span>
+      </article>
+
+      <article class="song-card" data-id="narodnaya">
+        <div class="song-header">
+          <h2 class="song-title">В лесу родилась ёлочка</h2>
+          <p class="song-artist">Народная</p>
+        </div>
+        <div class="chord-tags">
+          <span class="tag chord">C</span><span class="tag chord">G7</span><span class="tag chord">F</span><span class="tag chord">C</span>
+        </div>
+        <span class="badge badge-easy">Легко</span>
+      </article>
+    </main>
+  </div>
+
+  <!-- ЭКРАН 2: АККОРДЫ -->
+  <div id="chords-screen" class="screen hidden"></div>
+
+</body>
+</html>
