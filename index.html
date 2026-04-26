@@ -7,8 +7,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/guitarapp/assets/index-C24PSRXE.js"></script>
-  <link rel="stylesheet" crossorigin href="/guitarapp/assets/index-DD1n0pMX.css">
+  <script type="module" crossorigin src="/guitarapp/assets/index-B58Vo86i.js"></script>
+  <link rel="stylesheet" crossorigin href="/guitarapp/assets/index-W-FaMhCo.css">
 </head>
 <body>
 
@@ -77,7 +77,38 @@
   </div>
 
   <!-- ЭКРАН 2: АККОРДЫ -->
-  <div id="chords-screen" class="screen hidden"></div>
+<div id="chords-screen" class="screen hidden"></div>
+
+<!-- ЭКРАН 3: МЕТРОНОМ -->
+<div id="metronome-screen" class="screen hidden">
+  <header class="chords-header">
+    <button class="back-btn" id="metro-back">←</button>
+    <div class="header-info">
+      <h2 class="screen-title">🥁 Метроном</h2>
+    </div>
+  </header>
+
+  <div class="metro-display">
+    <div class="bpm-value" id="bpm-value">120</div>
+    <div class="bpm-label">BPM</div>
+  </div>
+
+  <div class="metro-controls">
+    <button class="metro-btn" id="bpm-minus">−</button>
+    <input type="range" id="bpm-slider" min="40" max="200" value="120" />
+    <button class="metro-btn" id="bpm-plus">+</button>
+  </div>
+
+  <div class="time-signature">
+    <button class="time-btn active" data-beats="4">4/4</button>
+    <button class="time-btn" data-beats="3">3/4</button>
+    <button class="time-btn" data-beats="6">6/8</button>
+  </div>
+
+  <div class="beat-indicator" id="beat-indicator"></div>
+
+  <button class="metro-start-btn" id="metro-toggle">▶ Start</button>
+</div>
 
 </body>
 </html>
