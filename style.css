@@ -138,3 +138,130 @@ body {
   .search-input { font-size: 14px; padding: 14px 16px 14px 40px; }
   .tag.chord { width: 36px; height: 36px; font-size: 12px; }
 }
+
+/* ================= ЭКРАН 3: МЕТРОНОМ ================= */
+.metro-display {
+  text-align: center;
+  margin: 32px 0 24px;
+}
+.bpm-value {
+  font-size: 72px;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1;
+  transition: color 0.2s;
+}
+.bpm-value.beat { color: var(--accent); }
+.bpm-label {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.metro-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.metro-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--btn-bg);
+  color: var(--text-main);
+  font-size: 24px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.metro-btn:hover { background: #14407a; transform: scale(1.05); }
+.metro-btn:active { transform: scale(0.95); }
+
+#bpm-slider {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--bg-card);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+#bpm-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent);
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(233, 69, 96, 0.4);
+  transition: transform 0.2s;
+}
+#bpm-slider::-webkit-slider-thumb:hover { transform: scale(1.1); }
+
+.time-signature {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.time-btn {
+  padding: 10px 20px;
+  background: var(--bg-card);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.time-btn:hover { border-color: var(--btn-bg); color: var(--text-main); }
+.time-btn.active {
+  background: var(--btn-bg);
+  color: var(--text-main);
+  border-color: var(--btn-bg);
+}
+
+.beat-indicator {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  margin: 0 auto 32px;
+  transition: all 0.1s ease;
+  box-shadow: 0 0 0 0 rgba(233, 69, 96, 0);
+}
+.beat-indicator.pulse {
+  background: var(--accent);
+  box-shadow: 0 0 20px rgba(233, 69, 96, 0.6);
+  transform: scale(1.15);
+}
+
+.metro-start-btn {
+  width: 100%;
+  height: 56px;
+  background: var(--accent);
+  border: none;
+  border-radius: 28px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 4px 16px rgba(233, 69, 96, 0.3);
+}
+.metro-start-btn:hover { background: #c0354c; transform: translateY(-2px); }
+.metro-start-btn:active { transform: scale(0.98); }
+.metro-start-btn.running {
+  background: var(--btn-bg);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
