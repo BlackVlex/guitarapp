@@ -21,9 +21,15 @@
       <input type="text" class="search-input" placeholder="Поиск песен..." />
       <span class="search-icon">🔍</span>
     </div>
-    <div class="filters">
-      <button class="filter-btn">Все исполнители ▼</button>
-      <button class="filter-btn">Сложность ▼</button>
+        <div class="filters">
+      <div class="filter-wrapper">
+        <button class="filter-btn" id="btn-artist">Все исполнители ▼</button>
+        <div id="list-artist" class="filter-list hidden"></div>
+      </div>
+      <div class="filter-wrapper">
+        <button class="filter-btn" id="btn-diff">Сложность ▼</button>
+        <div id="list-diff" class="filter-list hidden"></div>
+      </div>
     </div>
     <main class="song-list">
   <article class="song-card" data-id="tsoy_sun"><div class="song-header"><h2 class="song-title">Звезда по имени Солнце</h2><p class="song-artist">Виктор Цой</p></div><div class="chord-tags"><span class="tag chord">Am</span><span class="tag chord">F</span><span class="tag chord">C</span><span class="tag chord">G</span></div><span class="badge badge-medium">Средне</span></article>

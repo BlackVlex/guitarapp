@@ -1,22 +1,22 @@
-// 🎸 RusChords — FULL: Catalog + Chords + Metronome + Tuner + Expanded DB
+// 🎸 RusChords — FULL: Filters + Search + DB Expanded
 
-// ================= БАЗА ДАННЫХ (15 ПЕСЕН) =================
+// ================= БАЗА ДАННЫХ (С ПОЛЕМ DIFFICULTY) =================
 const songsDB = {
-  tsoy_sun: { title: "Звезда по имени Солнце", artist: "Виктор Цой", baseKey: "Am", chords: `Am              F\nВ нашем городе дожди...\n\nC               G\nИ не нужны нам небеса...`, hasBarre: true },
-  tsoy_pack: { title: "Пачка сигарет", artist: "Виктор Цой", baseKey: "Am", chords: `Am              Dm\nЯ сижу и смотрю в чужое небо...\n\nG               C\nИ мне нравится, когда кто-то рядом...`, hasBarre: false },
-  kino: { title: "Группа крови", artist: "Кино", baseKey: "Am", chords: `Am              F\nГруппа крови — на рукаве...\n\nC               G\nМой порядковый номер — на рукаве...`, hasBarre: true },
-  ddt: { title: "Что такое осень", artist: "ДДТ", baseKey: "Am", chords: `Am              Dm\nЧто такое осень — это небо...\n\nG               C\nПлачущее небо под ногами...`, hasBarre: false },
-  nautilus: { title: "Я хочу быть с тобой", artist: "Наутилус Помпилиус", baseKey: "Am", chords: `Am              G\nЯ хочу быть с тобой...\n\nC               F\nЯ хочу быть с тобой...`, hasBarre: true },
-  alisa: { title: "Последний герой", artist: "Алиса", baseKey: "Em", chords: `Em              Am\nКто не спрятался, я не виноват...\n\nD               G\nПоследний герой уходит в закат...`, hasBarre: false },
-  splin: { title: "Выхода нет", artist: "Сплин", baseKey: "Am", chords: `Am              F\nВыхода нет, выхода нет...\n\nC               G\nВыхода нет, выхода нет...`, hasBarre: true },
-  zemfira: { title: "Искала", artist: "Земфира", baseKey: "Am", chords: `Am              F\nИскала тебя, как потерянную вещь...\n\nC               G\nИскала тебя, как потерянную вещь...`, hasBarre: false },
-  bi2: { title: "Полковнику никто не пишет", artist: "Би-2", baseKey: "Am", chords: `Am              F\nМой полковник, никто не пишет...\n\nC               G\nМой полковник, никто не ждёт...`, hasBarre: true },
-  kis: { title: "Кукла колдуна", artist: "Король и Шут", baseKey: "Am", chords: `Am              G\nВ доме с привидениями я живу...\n\nC               F\nВ доме с привидениями я живу...`, hasBarre: true },
-  mumiy: { title: "Утекай", artist: "Мумий Тролль", baseKey: "Am", chords: `Am              F\nУтекай, утекай, утекай...\n\nC               G\nУтекай, утекай, утекай...`, hasBarre: false },
-  aria: { title: "Штиль", artist: "Ария", baseKey: "Em", chords: `Em              Am\nЯ знаю, ты ждёшь...\n\nD               G\nЯ знаю, ты веришь...`, hasBarre: false },
-  vysotsky: { title: "Конь", artist: "Владимир Высоцкий", baseKey: "Am", chords: `Am              Dm\nУводил меня отец в далёкий край...\n\nE               Am\nГде рождались кони и горел костёр...`, hasBarre: false },
-  lube: { title: "Комбат", artist: "Любэ", baseKey: "Dm", chords: `Dm              Bb\nКомбат, батя, батяня, батя...\n\nC               Dm\nЗемлянка, огонь и гармонь...`, hasBarre: false },
-  narodnaya: { title: "В лесу родилась ёлочка", artist: "Народная", baseKey: "C", chords: `C               G7\nВ лесу родилась ёлочка,\nВ лесу она росла...\n\nF               C\nЗимой и летом стройная, зелёная была.`, hasBarre: false }
+  tsoy_sun: { title: "Звезда по имени Солнце", artist: "Виктор Цой", baseKey: "Am", difficulty: "medium", chords: `Am              F\nВ нашем городе дожди...\n\nC               G\nИ не нужны нам небеса...`, hasBarre: true },
+  tsoy_pack: { title: "Пачка сигарет", artist: "Виктор Цой", baseKey: "Am", difficulty: "easy", chords: `Am              Dm\nЯ сижу и смотрю в чужое небо...\n\nG               C\nИ мне нравится, когда кто-то рядом...`, hasBarre: false },
+  kino: { title: "Группа крови", artist: "Кино", baseKey: "Am", difficulty: "medium", chords: `Am              F\nГруппа крови — на рукаве...\n\nC               G\nМой порядковый номер — на рукаве...`, hasBarre: true },
+  ddt: { title: "Что такое осень", artist: "ДДТ", baseKey: "Am", difficulty: "easy", chords: `Am              Dm\nЧто такое осень — это небо...\n\nG               C\nПлачущее небо под ногами...`, hasBarre: false },
+  nautilus: { title: "Я хочу быть с тобой", artist: "Наутилус Помпилиус", baseKey: "Am", difficulty: "medium", chords: `Am              G\nЯ хочу быть с тобой...\n\nC               F\nЯ хочу быть с тобой...`, hasBarre: true },
+  alisa: { title: "Последний герой", artist: "Алиса", baseKey: "Em", difficulty: "easy", chords: `Em              Am\nКто не спрятался, я не виноват...\n\nD               G\nПоследний герой уходит в закат...`, hasBarre: false },
+  splin: { title: "Выхода нет", artist: "Сплин", baseKey: "Am", difficulty: "medium", chords: `Am              F\nВыхода нет, выхода нет...\n\nC               G\nВыхода нет, выхода нет...`, hasBarre: true },
+  zemfira: { title: "Искала", artist: "Земфира", baseKey: "Am", difficulty: "easy", chords: `Am              F\nИскала тебя, как потерянную вещь...\n\nC               G\nИскала тебя, как потерянную вещь...`, hasBarre: false },
+  bi2: { title: "Полковнику никто не пишет", artist: "Би-2", baseKey: "Am", difficulty: "medium", chords: `Am              F\nМой полковник, никто не пишет...\n\nC               G\nМой полковник, никто не ждёт...`, hasBarre: true },
+  kis: { title: "Кукла колдуна", artist: "Король и Шут", baseKey: "Am", difficulty: "hard", chords: `Am              G\nВ доме с привидениями я живу...\n\nC               F\nВ доме с привидениями я живу...`, hasBarre: true },
+  mumiy: { title: "Утекай", artist: "Мумий Тролль", baseKey: "Am", difficulty: "easy", chords: `Am              F\nУтекай, утекай, утекай...\n\nC               G\nУтекай, утекай, утекай...`, hasBarre: false },
+  aria: { title: "Штиль", artist: "Ария", baseKey: "Em", difficulty: "medium", chords: `Em              Am\nЯ знаю, ты ждёшь...\n\nD               G\nЯ знаю, ты веришь...`, hasBarre: false },
+  vysotsky: { title: "Конь", artist: "Владимир Высоцкий", baseKey: "Am", difficulty: "hard", chords: `Am              Dm\nУводил меня отец в далёкий край...\n\nE               Am\nГде рождались кони и горел костёр...`, hasBarre: false },
+  lube: { title: "Комбат", artist: "Любэ", baseKey: "Dm", difficulty: "easy", chords: `Dm              Bb\nКомбат, батя, батяня, батя...\n\nC               Dm\nЗемлянка, огонь и гармонь...`, hasBarre: false },
+  narodnaya: { title: "В лесу родилась ёлочка", artist: "Народная", baseKey: "C", difficulty: "easy", chords: `C               G7\nВ лесу родилась ёлочка,\nВ лесу она росла...\n\nF               C\nЗимой и летом стройная, зелёная была.`, hasBarre: false }
 };
 
 const NOTES = ["C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"];
@@ -29,7 +29,102 @@ const tunerScreen = document.getElementById('tuner-screen');
 const searchInput = document.querySelector('.search-input');
 const songCards = document.querySelectorAll('.song-card');
 
-// ================= МЕТРОНОМ =================
+// Элементы фильтров
+const btnArtist = document.getElementById('btn-artist');
+const btnDiff = document.getElementById('btn-diff');
+const listArtist = document.getElementById('list-artist');
+const listDiff = document.getElementById('list-diff');
+
+let activeFilters = { artist: 'all', difficulty: 'all' };
+
+// ================= ИНИЦИАЛИЗАЦИЯ ФИЛЬТРОВ =================
+function initFilters() {
+  // 1. Сбор уникальных артистов
+  const artists = [...new Set(Object.values(songsDB).map(s => s.artist))].sort();
+  
+  // Заполняем список артистов
+  listArtist.innerHTML = `<div class="filter-option active" data-val="all">Все исполнители</div>`;
+  artists.forEach(art => {
+    listArtist.innerHTML += `<div class="filter-option" data-val="${art}">${art}</div>`;
+  });
+
+  // Заполняем список сложности
+  listDiff.innerHTML = `
+    <div class="filter-option active" data-val="all">Любая сложность</div>
+    <div class="filter-option" data-val="easy">🟢 Легко</div>
+    <div class="filter-option" data-val="medium">🟡 Средне</div>
+    <div class="filter-option" data-val="hard">🔴 Сложно</div>
+  `;
+
+  // Обработчики кликов по опциям
+  listArtist.querySelectorAll('.filter-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      activeFilters.artist = opt.dataset.val;
+      btnArtist.textContent = opt.dataset.val === 'all' ? 'Все исполнители ▼' : opt.dataset.val + ' ▼';
+      listArtist.classList.add('hidden');
+      updateFilterStyles(listArtist, opt);
+      applyAllFilters();
+    });
+  });
+
+  listDiff.querySelectorAll('.filter-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+      activeFilters.difficulty = opt.dataset.val;
+      const labels = { all: 'Сложность', easy: '🟢 Легко', medium: '🟡 Средне', hard: '🔴 Сложно' };
+      btnDiff.textContent = labels[opt.dataset.val] + ' ▼';
+      listDiff.classList.add('hidden');
+      updateFilterStyles(listDiff, opt);
+      applyAllFilters();
+    });
+  });
+
+  // Открытие/закрытие списков
+  btnArtist.addEventListener('click', (e) => { e.stopPropagation(); toggleList(listArtist, listDiff); });
+  btnDiff.addEventListener('click', (e) => { e.stopPropagation(); toggleList(listDiff, listArtist); });
+  
+  // Закрытие при клике вне
+  document.addEventListener('click', () => {
+    listArtist.classList.add('hidden');
+    listDiff.classList.add('hidden');
+  });
+}
+
+function toggleList(show, hide) {
+  hide.classList.add('hidden');
+  show.classList.toggle('hidden');
+}
+
+function updateFilterStyles(list, activeOpt) {
+  list.querySelectorAll('.filter-option').forEach(o => o.classList.remove('active'));
+  activeOpt.classList.add('active');
+}
+
+function applyAllFilters() {
+  const query = searchInput.value.toLowerCase().trim();
+
+  songCards.forEach(card => {
+    const id = card.dataset.id;
+    const song = songsDB[id];
+    if (!song) return;
+
+    // 1. Поиск
+    const matchesSearch = song.title.toLowerCase().includes(query) || song.artist.toLowerCase().includes(query);
+    
+    // 2. Фильтр Артиста
+    const matchesArtist = activeFilters.artist === 'all' || song.artist === activeFilters.artist;
+    
+    // 3. Фильтр Сложности
+    const matchesDiff = activeFilters.difficulty === 'all' || song.difficulty === activeFilters.difficulty;
+
+    if (matchesSearch && matchesArtist && matchesDiff) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+
+// ================= МЕТРОНОМ (Без изменений) =================
 let audioCtx = null, isPlaying = false, metroInterval = null, currentBPM = 120, beatCount = 0, beatsPerBar = 4;
 const metroBack = document.getElementById('metro-back'), metroToggle = document.getElementById('metro-toggle');
 const bpmSlider = document.getElementById('bpm-slider'), bpmValueEl = document.getElementById('bpm-value');
@@ -72,7 +167,7 @@ document.getElementById('bpm-minus').addEventListener('click', () => { if (curre
 document.getElementById('bpm-plus').addEventListener('click', () => { if (currentBPM < 200) { currentBPM += 5; bpmSlider.value = currentBPM; bpmValueEl.textContent = currentBPM; if (isPlaying) { clearInterval(metroInterval); metroInterval = setInterval(metroTick, (60 / currentBPM) * 1000); } } });
 timeBtns.forEach(btn => btn.addEventListener('click', () => { timeBtns.forEach(b => b.classList.remove('active')); btn.classList.add('active'); beatsPerBar = parseInt(btn.dataset.beats); beatCount = 0; }));
 
-// ================= ТЮНЕР =================
+// ================= ТЮНЕР (Без изменений) =================
 let tunerCtx = null, tunerAnalyser = null, tunerSource = null, tunerRunning = false, tunerRAF = null;
 const tunerToggle = document.getElementById('tuner-toggle'), tunerBack = document.getElementById('tuner-back');
 const noteNameEl = document.getElementById('note-name'), freqEl = document.getElementById('frequency');
@@ -183,18 +278,16 @@ function openChordsScreen(id) {
 function saveTranspose(id, step) { const d = JSON.parse(localStorage.getItem('rusChords_transpose'))||{}; d[id]=step; localStorage.setItem('rusChords_transpose', JSON.stringify(d)); }
 function updateKeyDisplay(baseNote, step) { const idx = NOTES.indexOf(baseNote); let ni = (idx + step) % NOTES.length; if (ni<0) ni+=NOTES.length; const el = document.querySelector('.current-key'); if (el) el.textContent = NOTES[ni]+'m'; }
 
-searchInput.addEventListener('input', (e) => {
-  const q = e.target.value.toLowerCase().trim();
-  songCards.forEach(card => {
-    const t = card.querySelector('.song-title').textContent.toLowerCase();
-    const a = card.querySelector('.song-artist').textContent.toLowerCase();
-    card.style.display = (t.includes(q)||a.includes(q)) ? 'block' : 'none';
-  });
-});
+// Привязка поиска к фильтрам
+searchInput.addEventListener('input', applyAllFilters);
 
+// Логотип -> Главная
 document.querySelector('.logo').addEventListener('click', () => {
   catalogScreen.classList.remove('hidden');
   [chordsScreen, metronomeScreen, tunerScreen].forEach(s => s.classList.add('hidden'));
   if (isPlaying) { isPlaying=false; metroToggle.textContent='▶ Start'; metroToggle.classList.remove('running'); clearInterval(metroInterval); }
   if (tunerRunning) { tunerRunning=false; if(tunerRAF)cancelAnimationFrame(tunerRAF); if(tunerSource)tunerSource.disconnect(); tunerToggle.textContent='▶ Старт'; tunerToggle.classList.remove('running'); }
 });
+
+// Запуск фильтров
+initFilters();
