@@ -291,3 +291,12 @@ document.querySelector('.logo').addEventListener('click', () => {
 
 // Запуск фильтров
 initFilters();
+
+// ================= PWA: РЕГИСТРАЦИЯ SERVICE WORKER =================
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/guitarapp/service-worker.js', { scope: '/guitarapp/' })
+      .then(reg => console.log('SW зарегистрирован:', reg.scope))
+      .catch(err => console.log('SW ошибка:', err));
+  });
+}
